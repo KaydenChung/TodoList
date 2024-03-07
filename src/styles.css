@@ -1,0 +1,174 @@
+/* Custom Font */
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@700&display=swap');
+
+
+
+/* Everything */
+* {
+  font-family: 'Kalam', cursive;
+  box-sizing: border-box;
+}
+
+
+
+/* Body */
+body {
+  background: #333;
+  color: hsl(200, 100%, 90%);
+  max-width: 600px;
+  padding: 1rem;
+  margin: 0 auto;
+}
+
+
+
+/* Header */
+.header {
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 3.5rem;
+  letter-spacing: 0.5rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+/* Footer */
+.footer {
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 2rem;
+  letter-spacing: 0.5rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  color: red;
+}
+
+
+
+/* User Information */
+.userInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+
+
+/* Delete Button */
+.btn.btn-danger {
+  background: hsl(0, 100%, 40%, 0.1);
+  border: 2px solid hsl(0, 100%, 40%);
+  color: hsl(0, 100%, 40%);
+  padding: 0.25rem 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+.btn.btn-danger:hover, .btn.btn-danger:focus-visible {
+  background: hsl(0, 100%, 40%, 0.2);
+}
+
+
+/* List */
+.list {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 1.5rem;
+}
+.list li:has(input:checked) label {
+  color: hsl(200, 20%, 40%);
+}
+.list li {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.list li label {
+  display: flex;
+  gap: 1rem;
+  cursor: pointer;
+  align-items: center;
+}
+.list li:has(input:focus-visible) label {
+  outline: 1px solid hsl(200, 100%, 50%);
+}
+.list li input {
+  outline: none;
+  width: 0;
+  height: 0;
+  appearance: none;
+  pointer-events: none;
+  position: absolute;
+}
+
+/* Checkbox Not Clicked */
+.list li label::before {
+  content: "";
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  background: hsl(200, 100%, 90%);
+  border-radius: 3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.list li label:hover::before {
+  background: hsl(200, 100%, 80%);
+}
+
+/* Checkbox Clicked */
+.list li:has(input:checked) label::before {
+  content: "✔";
+  background: hsl(200, 100%, 40%);
+  color: hsl(200, 100%, 90%);
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.list li:has(input:checked) label:hover::before {
+  background: hsl(200, 100%, 30%);
+}
+
+
+
+/* New Item Form */
+.form-label {
+  font-size: 1.5rem;
+}
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 2rem 0rem 0rem 0rem;
+}
+.new-item-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.new-item-form input {
+  outline: none;
+  border: 3px solid hsl(200, 100%, 40%);
+  background: hsl(200, 100%, 30%);
+  border-radius: 0.25em;
+  padding: 0.5em 0.5em;
+  color: hsl(200, 100%, 90%);
+  font-size: 1.5rem;
+}
+.new-item-form input:focus {
+  border: 3px solid hsl(200, 100%, 70%);
+}
+.btn {
+  background: hsl(200, 100%, 50%, 0.1);
+  border: 2px solid hsl(200, 100%, 50%);
+  color: hsl(200, 100%, 50%);
+  padding: 0.25em 0.5em;
+  border-radius: 5em;
+  cursor: pointer;
+  outline: none;
+  font-size: 1.5rem;
+}
+.btn:hover, .btn:focus-visible {
+  background: hsl(200, 100%, 50%, 0.2);
+}
